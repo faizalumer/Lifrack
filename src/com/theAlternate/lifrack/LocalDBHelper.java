@@ -8,7 +8,7 @@ import android.os.Build;
 import android.util.Log;
 
 public class LocalDBHelper extends SQLiteOpenHelper{
-	private static final int DATABASE_VERSION = 1;
+	private static final int DATABASE_VERSION = 2;
 	private static final String DATABASE_NAME = "HabitDB";
 	private static final String LOG_TAG = "LocalDBHelper";
 
@@ -68,6 +68,8 @@ public class LocalDBHelper extends SQLiteOpenHelper{
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){		
 			if(oldVersion == 1 && newVersion==2){
 				if(BuildConfig.DEBUG){Log.d(LOG_TAG,"onUpgrade(" +oldVersion +","+ newVersion +")");}
+				db.execSQL("DROP VIEW IF EXISTS " + View_HabitHitsSummary.CREATE_VIEW);
+				db.execSQL(View_HabitHitsSummary.CREATE_VIEW);
 				/*db.execSQL("DROP VIEW IF EXISTS " + View_Hits.VIEW_NAME);
 				db.execSQL("DROP VIEW IF EXISTS " + View_ArchivedHits.VIEW_NAME);
 				db.execSQL(View_Hits.CREATE_VIEW);

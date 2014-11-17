@@ -59,7 +59,7 @@ public class View_HabitHitsSummary{
 			+ Table_HabitHits.COLUMN_HABIT_ID + " AS " + COLUMN_HABIT_ID
 			+ ", count(*) AS " + COLUMN_THIS_WEEK
 			+ " FROM " + Table_HabitHits.TABLE_NAME
-			+ " WHERE DATE(" + Table_HabitHits.COLUMN_HIT_TIME + ",'localtime') >= DATE('now','localtime','weekday 1','-7 days')"
+			+ " WHERE DATE(" + Table_HabitHits.COLUMN_HIT_TIME + ",'localtime') >= DATE('now','localtime','weekday 0','-6 days')"
 			+ " GROUP BY " + Table_HabitHits.COLUMN_HABIT_ID;
 	
 	//create view script
