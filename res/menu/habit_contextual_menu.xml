@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <item 
+        android:id="@+id/action_delete_habit"
+        android:icon="@android:drawable/ic_menu_delete"
+        app:showAsAction="ifRoom"
+        android:title="Delete"
+        />
+    
+    <item 
+        android:id="@+id/action_archive_habit"
+        android:icon="@drawable/ic_menu_archive"
+        app:showAsAction="ifRoom"
+        android:title="Archive"
+        />
+    
+    <item 
+        android:id="@+id/action_edit_habit"
+        android:icon="@android:drawable/ic_menu_edit"
+        app:showAsAction="always"
+        android:title="Edit"
+        />
+    
+</menu>

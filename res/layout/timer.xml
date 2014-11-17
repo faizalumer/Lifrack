@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Chronometer
+        android:id="@+id/cmt_timer"
+        android:layout_width="112dp"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:textSize="18sp" />
+
+    <TableRow
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <ImageButton
+            android:id="@+id/btn_endtimer"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/selector_button_background"
+            android:contentDescription="end"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:src="@drawable/ic_end_timer"
+            />
+
+        <android.support.v7.widget.Space
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            />
+            
+
+
+        <ImageButton
+            android:id="@+id/btn_canceltimer"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/selector_button_background"
+            android:contentDescription="cancel"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:src="@drawable/ic_cancel_timer" />
+    </TableRow>
+
+</merge>

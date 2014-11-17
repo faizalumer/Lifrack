@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:id="@+id/scrl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_save_habit"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/edt_habitname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_curved_border"
+                android:hint="Enter a Tracker name. Example - moisturize"
+                android:padding="10dp" />
+
+            <CheckedTextView
+                android:id="@+id/chk_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Follow a schedule"
+                android:textSize="22sp" />
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/light_grey" />
+
+            <LinearLayout
+                android:id="@+id/container_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center" >
+
+                    <ToggleButton
+                        android:id="@+id/tgbtn_monday"
+                        android:layout_width="0dp"
+                        android:layout_height="37dp"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:textOff="Mon"
+                        android:textOn="Mon"
+                        android:textSize="15sp"
+                        android:background="@drawable/selector_toggle_background"
+                        android:textColor="@color/white_opaque"
+                        android:textStyle="bold" />
+
+                    <ToggleButton
+                        android:id="@+id/tgbtn_tuesday"
+                        android:layout_width="0dp"
+                        android:layout_height="37dp"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:textOff="Tue"
+                        android:textOn="Tue"
+                        android:textSize="15sp"
+                        android:background="@drawable/selector_toggle_background"
+                        android:textColor="@color/white_opaque"
+                        android:textStyle="bold" />
+
+                    <ToggleButton
+                        android:id="@+id/tgbtn_wednesday"
+                        android:layout_width="0dp"
+                        android:layout_height="37dp"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:textOff="Wed"
+                        android:textOn="Wed"
+                        android:textSize="15sp"
+                        android:background="@drawable/selector_toggle_background"
+                        android:textColor="@color/white_opaque"
+                        android:textStyle="bold" />
+
+                    <ToggleButton
+                        android:id="@+id/tgbtn_thursday"
+                        android:layout_width="0dp"
+                        android:layout_height="37dp"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:textOff="Thu"
+                        android:textOn="Thu"
+                        android:textSize="15sp"
+                        android:background="@drawable/selector_toggle_background"
+                        android:textColor="@color/white_opaque"
+                        android:textStyle="bold" />
+
+                    <ToggleButton
+                        android:id="@+id/tgbtn_friday"
+                        android:layout_width="0dp"
+                        android:layout_height="37dp"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:textOff="Fri"
+                        android:textOn="Fri"
+                        android:textSize="15sp" 
+                        android:background="@drawable/selector_toggle_background"
+                        android:textColor="@color/white_opaque"
+                        android:textStyle="bold" />
+
+                    <ToggleButton
+                        android:id="@+id/tgbtn_saturday"
+                        android:layout_width="0dp"
+                        android:layout_height="37dp"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:textOff="Sat"
+                        android:textOn="Sat"
+                        android:textSize="15sp" 
+                        android:background="@drawable/selector_toggle_background"
+                        android:textColor="@color/white_opaque"
+                        android:textStyle="bold" />
+
+                    <ToggleButton
+                        android:id="@+id/tgbtn_sunday"
+                        android:layout_width="0dp"
+                        android:layout_height="37dp"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:textOff="Sun"
+                        android:textOn="Sun"
+                        android:textSize="15sp" 
+                        android:background="@drawable/selector_toggle_background"
+                        android:textColor="@color/white_opaque"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/light_grey" />
+
+                <com.theAlternate.lifrack.Setting_WeekFrequency
+                    android:id="@+id/stg_weekfrequency"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="2dp"
+                    android:gravity="center_vertical"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/light_grey" />
+
+                <com.theAlternate.lifrack.Setting_DailyFrequency
+                    android:id="@+id/stg_dailyfrequency"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="2dp"
+                    android:gravity="center_vertical" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/light_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout 
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        >
+	                    <TextView
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text="Reminder(s)"
+	                        android:textSize="22sp"
+	                        android:layout_alignParentStart="true"
+	                        android:layout_alignParentLeft="true" />
+	
+	                    <ImageButton
+	                        android:id="@+id/btn_addremainder"
+	                        android:layout_width="48dp"
+	                        android:layout_height="48dp"
+	                        android:layout_gravity="center_horizontal"
+	                        android:background="@drawable/selector_button_background"
+	                        android:minHeight="0dp"
+	                        android:src="@drawable/selector_add_reminder"
+	                        android:layout_alignParentEnd="true"
+	                        android:layout_alignParentRight="true" />
+                    
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.GridLayout
+                        xmlns:grid="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/grdl_reminders"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        grid:columnCount="2" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/light_grey"
+                    android:layout_marginTop="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@id/btn_save_habit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/green"
+        android:text="Save"
+        android:textColor="@color/white_opaque"
+        android:textStyle="bold"
+        android:textSize="22sp" />
+
+</RelativeLayout>
