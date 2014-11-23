@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="864"
+   height="864"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   inkscape:export-filename="/home/faizal/DEV/ADT workspace/Aladha/res/drawable-xxhdpi/ic_achieve_target.png"
+   inkscape:export-xdpi="13.68"
+   inkscape:export-ydpi="13.68"
+   sodipodi:docname="ic_achieve_target.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Tail"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Tail"
+       style="overflow:visible">
+      <g
+         id="g4128"
+         transform="scale(-0.2,-0.2)">
+        <path
+           id="path4130"
+           d="M -3.8048674,-3.9585227 0.54352094,0"
+           style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path4132"
+           d="M -1.2866832,-3.9585227 3.0617053,0"
+           style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path4134"
+           d="M 1.3053582,-3.9585227 5.6537466,0"
+           style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path4136"
+           d="M -3.8048674,4.1775838 0.54352094,0.21974226"
+           style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path4138"
+           d="M -1.2866832,4.1775838 3.0617053,0.21974226"
+           style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path4140"
+           d="M 1.3053582,4.1775838 5.6537466,0.21974226"
+           style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round"
+           inkscape:connector-curvature="0" />
+      </g>
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-24.463096"
+     inkscape:cy="589.16615"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="true"
+     inkscape:showpageshadow="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="false"
+     inkscape:snap-center="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:object-paths="true"
+     inkscape:snap-to-guides="false"
+     inkscape:snap-grids="false">
+    <sodipodi:guide
+       orientation="1,0"
+       position="72,0"
+       id="guide2985" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="973.78705,787.91898"
+       id="guide2987" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,72"
+       id="guide2989" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="792,0"
+       id="guide2991" />
+    <sodipodi:guide
+       orientation="-0.70710678,0.70710678"
+       position="671.22062,683.93451"
+       id="guide12852" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-188.36218)">
+    <path
+       sodipodi:type="arc"
+       style="opacity:0.6;fill:none;stroke:#333333;stroke-width:70;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3848"
+       sodipodi:cx="445.71429"
+       sodipodi:cy="429.71429"
+       sodipodi:rx="188.57143"
+       sodipodi:ry="188.57143"
+       d="M 618.02656,353.11361 A 188.57143,188.57143 0 1 1 511.3433,252.9319"
+       transform="translate(-8,202.66565)"
+       sodipodi:start="5.8648764"
+       sodipodi:end="11.351046"
+       sodipodi:open="true" />
+    <path
+       sodipodi:type="arc"
+       style="opacity:0.59999999999999998;fill:none;stroke:#333333;stroke-width:70;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3850"
+       sodipodi:cx="485.71429"
+       sodipodi:cy="444"
+       sodipodi:rx="303.42856"
+       sodipodi:ry="303.42856"
+       d="m 772.87655,345.98608 c 54.13159,158.59534 -30.553,331.04458 -189.14834,385.17618 -158.59533,54.13159 -331.04458,-30.55301 -385.17617,-189.14834 -54.1316,-158.59534 30.553,-331.04458 189.14834,-385.17618 56.38817,-19.24635 117.19484,-21.4654 174.83589,-6.38037"
+       transform="translate(-48,188.36218)"
+       sodipodi:start="5.954265"
+       sodipodi:end="11.25154"
+       sodipodi:open="true" />
+    <path
+       style="opacity:0.6;fill:#333333;fill-opacity:1;stroke:none"
+       d="M 692.71875 76.34375 L 654.53125 114.53125 L 590.5 178.5625 L 591.875 179.96875 L 605.125 241.21875 L 458.5625 387.78125 C 452.06702 385.37331 445.05187 384.03125 437.71875 384.03125 C 404.58167 384.03125 377.71875 410.89417 377.71875 444.03125 C 377.71875 477.16833 404.58167 504.03125 437.71875 504.03125 C 470.85583 504.03125 497.71875 477.16833 497.71875 444.03125 C 497.71875 436.67748 496.38964 429.63577 493.96875 423.125 L 637.03125 280.03125 L 707.09375 295.1875 L 707.5625 295.65625 L 707.875 295.375 L 708.9375 295.59375 L 708.28125 294.9375 L 771.625 231.625 L 809.78125 193.4375 L 713.53125 173.53125 L 692.71875 76.34375 z "
+       transform="translate(0,188.36218)"
+       id="path3278" />
+  </g>
+</svg>

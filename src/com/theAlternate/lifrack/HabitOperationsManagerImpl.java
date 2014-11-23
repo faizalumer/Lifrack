@@ -279,13 +279,6 @@ public class HabitOperationsManagerImpl implements HabitOperationsManager{
 					;
 			db.execSQL(sql, bindArgs);
 			
-			/*//delete habit from history table
-			int count = db.delete(Table_HabitsHistory.TABLE_NAME, Table_HabitsHistory.COLUMN_HABIT_ID + "=?", bindArgs);
-			
-			if(count != 1) throw new RuntimeException("Unarchive failed for habit id " + id 
-					+ ". The expected number of deleted rows in archived habit table is 1. Instead " + count + "rows were deleted"
-					);*/
-			
 			//insert hits
 			sql = "INSERT INTO " + Table_HabitHits.TABLE_NAME
 					+ "(" + Table_HabitHits.COLUMN_ID
@@ -300,9 +293,6 @@ public class HabitOperationsManagerImpl implements HabitOperationsManager{
 					+ " WHERE " + Table_HabitHitsHistory.COLUMN_HABIT_ID + "=?"
 					;
 			db.execSQL(sql, bindArgs);
-			
-			//delete hits from history table
-			//db.delete(Table_HabitHitsHistory.TABLE_NAME, Table_HabitHitsHistory.COLUMN_HABIT_ID + "=?", bindArgs);
 			
 			//insert hit sessions
 			sql = "INSERT INTO " + Table_HabitHitSessions.TABLE_NAME
@@ -323,9 +313,6 @@ public class HabitOperationsManagerImpl implements HabitOperationsManager{
 					;
 			db.execSQL(sql, bindArgs);
 			
-			//delete hit sessions from history table
-			//db.delete(Table_HabitHitSessionsHistory.TABLE_NAME, Table_HabitHitSessionsHistory.COLUMN_HABIT_ID + "=?", bindArgs);
-			
 			//insert targets
 			sql = "INSERT INTO " + Table_HabitTargets.TABLE_NAME
 					+ "(" + Table_HabitTargets.COLUMN_ID
@@ -344,9 +331,6 @@ public class HabitOperationsManagerImpl implements HabitOperationsManager{
 					+ " WHERE " + Table_HabitTargetsHistory.COLUMN_HABIT_ID + "=?"
 					;
 			db.execSQL(sql, bindArgs);
-			
-			//delete targets from history table
-			//db.delete(Table_HabitTargetsHistory.TABLE_NAME, Table_HabitTargetsHistory.COLUMN_HABIT_ID + "=?", bindArgs);
 			
 			//insert schedule
 			sql = "INSERT INTO " + Table_HabitSchedules.TABLE_NAME
@@ -382,12 +366,6 @@ public class HabitOperationsManagerImpl implements HabitOperationsManager{
 					+ " WHERE " + Table_HabitSchedulesHistory.COLUMN_HABIT_ID + "=?"
 					;
 			db.execSQL(sql, bindArgs);
-			
-			//delete schedule from history table
-			//db.delete(Table_HabitSchedulesHistory.TABLE_NAME, Table_HabitSchedulesHistory.COLUMN_HABIT_ID + "=?", bindArgs);
-			
-			//delete reminders(there is no history table for reminders, so doing only deletion)
-			//int reminderCount = db.delete(Table_HabitReminders.TABLE_NAME, Table_HabitReminders.COLUMN_HABIT_ID + "=?", bindArgs);
 			
 			//delete hit sessions
 			new HitSessionHistoryDaoImpl().deleteByHabitId(habitId);

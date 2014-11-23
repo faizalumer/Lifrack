@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="864"
+   height="864"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   inkscape:export-filename="/home/faizal/DEV/ADT workspace/Aladha/res/drawable-xxhdpi/ic_cancel_timer.png"
+   inkscape:export-xdpi="8.6099997"
+   inkscape:export-ydpi="8.6099997"
+   sodipodi:docname="ic_cancel_timer.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="7.8571371"
+     inkscape:cy="502.85714"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="true"
+     inkscape:showpageshadow="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       orientation="1,0"
+       position="72,0"
+       id="guide2985" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,792"
+       id="guide2987" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,72"
+       id="guide2989" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="792,0"
+       id="guide2991" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="182,0"
+       id="guide8021" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="682,0"
+       id="guide8023" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,682"
+       id="guide8025" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,182"
+       id="guide8027" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-188.36218)">
+    <path
+       style="opacity:0.6;fill:#333333;fill-opacity:1;stroke:#333333;stroke-width:0.52216935;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:6.26603148, 0.52216929;stroke-dashoffset:0"
+       d="m 300.25432,371.46381 c -1.83827,0.007 -3.68422,0.71988 -5.0872,2.13405 L 186.99979,482.62742 c -2.80595,2.82832 -2.78522,7.36842 0.0432,10.17436 l 126.188,125.19647 -128.12807,123.19178 c -2.87194,2.76128 -2.97683,7.30243 -0.21556,10.17436 L 291.3518,862.07531 c 2.76128,2.87194 7.28086,2.9553 10.1528,0.194 L 432.49953,736.3184 561.51139,864.31712 c 2.82833,2.80594 7.36843,2.78521 10.17437,-0.0432 L 679.85309,755.24445 c 2.80594,-2.82832 2.78523,-7.36842 -0.0432,-10.17437 L 553.62194,619.87361 681.77156,496.68184 c 2.87194,-2.76129 2.9553,-7.30244 0.19401,-10.17436 L 575.5227,375.79655 c -2.76129,-2.87194 -7.30244,-2.9553 -10.17436,-0.19401 L 434.35334,501.55347 305.34149,373.55473 c -1.41416,-1.40296 -3.24893,-2.09821 -5.08717,-2.09092 z"
+       id="rect7956"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

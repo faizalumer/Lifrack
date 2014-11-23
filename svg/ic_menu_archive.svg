@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32"
+   height="32"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   inkscape:export-filename="/home/faizal/DEV/ADT workspace/Aladha/res/drawable-xxhdpi/ic_menu_archive.png"
+   inkscape:export-xdpi="270"
+   inkscape:export-ydpi="270"
+   sodipodi:docname="ic_menu_archive1.svg">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="42.938861 : 289.90893 : 1"
+       inkscape:vp_y="642.78761 : 766.04444 : 0"
+       inkscape:vp_z="900.96365 : 380.22376 : 1"
+       inkscape:persp3d-origin="448.90849 : 325.39555 : 1"
+       id="perspective3059" />
+    <filter
+       id="filter3886"
+       inkscape:label="Invert"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert colors"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix3888"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix3890"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix3931" />
+      <feColorMatrix
+         id="feColorMatrix3933"
+         type="saturate"
+         values="1"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix3935"
+         in="fbSourceGraphic"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 " />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.2"
+     inkscape:cx="18.575032"
+     inkscape:cy="13.82524"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="true"
+     inkscape:showpageshadow="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:snap-grids="false"
+     inkscape:snap-nodes="true"
+     inkscape:snap-to-guides="true"
+     inkscape:object-nodes="false"
+     inkscape:snap-smooth-nodes="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-global="false">
+    <sodipodi:guide
+       orientation="0,1"
+       position="-114.28571,120"
+       id="guide2989" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="120,940"
+       id="guide3855" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="840,0"
+       id="guide3857" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="157.14286,840"
+       id="guide3913" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="-23.928571,4"
+       id="guide3823" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="-29.107143,28"
+       id="guide3825" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="3.214,4"
+       id="guide3827" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="28,33.571429"
+       id="guide3829" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1020.3622)">
+    <path
+       inkscape:export-filename="/home/faizal/DEV/ADT workspace/Aladha/res/drawable-xxhdpi/ic_menu_archive.png"
+       inkscape:export-xdpi="11.77"
+       inkscape:export-ydpi="11.77"
+       style="opacity:0.8;fill:#ffffff;fill-opacity:0.8;fill-rule:nonzero;stroke:none;filter:url(#filter3886)"
+       d="M 232.71875,79.5 227.9375,85.65625 88.5,265.09375 l -18.15625,23.375 -0.46875,0 0,0.59375 -1.375,1.78125 1.375,0 0,502.28125 722.34375,0 0,-502.28125 5,0 -20,-25.75 L 637.78125,85.65625 633,79.5 l -7.8125,0 -384.65625,0 -7.8125,0 z m 15.65625,31.90625 368.96875,0 L 732,258.9375 l -598.28125,0 L 248.375,111.40625 z m 130.96875,263.15625 111.4375,0 0,112.75 91.625,-0.59375 L 436.6875,742.875 287.71875,488.59375 379.34375,488 l 0,-113.4375 z"
+       id="rect3079"
+       transform="matrix(0.03360934,0,0,0.03360934,1.148664,1021.6513)"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

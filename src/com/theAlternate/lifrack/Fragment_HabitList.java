@@ -67,16 +67,6 @@ public class Fragment_HabitList extends ListFragment implements LoaderManager.Lo
 		inflater.inflate(R.menu.fragment_habitlist, menu);
 	}
 	
-	//this does not work
-	/*@Override
-	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo){
-		if(BuildConfig.DEBUG){Log.d(LOG_TAG,"onCreateContextMenu before super");}
-		super.onCreateContextMenu(menu, v, menuInfo);
-		if(BuildConfig.DEBUG){Log.d(LOG_TAG,"onCreateContextMenu after super");}
-		MenuInflater inflater = getActivity().getMenuInflater();
-		inflater.inflate(R.menu.target_contextual_menu, menu);
-	}*/
-	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item){
 		//if(BuildConfig.DEBUG){Log.d(LOG_TAG,"onOptionsItemSelected");}

@@ -26,6 +26,27 @@ public class MainActivity extends ActionBarActivity {
 	private ViewPager mViewPager; 
 	
 	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.activity_habitdetails, menu);
+		return super.onCreateOptionsMenu(menu);
+	};
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.action_About:
+			Intent intent = new Intent(this,Activity_About.class);
+			startActivity(intent);
+			break;
+
+		default:
+			
+			break;
+		}
+		return super.onOptionsItemSelected(item);	
+	}
+	
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if(BuildConfig.DEBUG){Log.d(LOG_TAG,"onCreate()");}

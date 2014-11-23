@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024"
+   height="500"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   inkscape:export-filename="/home/faizal/DEV/icons/lifrack/featured-graphic.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   sodipodi:docname="featured-graphic.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.96157256"
+     inkscape:cx="524.75968"
+     inkscape:cy="249.83005"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-552.36218)">
+    <rect
+       style="opacity:1;fill:#2784a5;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect4419"
+       width="1024.2947"
+       height="503.05597"
+       x="0"
+       y="-0.02550995"
+       transform="translate(0,552.36218)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#999999;fill-opacity:1;stroke:none"
+       sodipodi:cx="39.648487"
+       sodipodi:cy="23.188128"
+       sodipodi:rx="9.3439112"
+       sodipodi:ry="21.655146"
+       d="m 48.992398,23.188128 a 9.3439112,21.655146 0 1 1 -18.687822,0 9.3439112,21.655146 0 1 1 18.687822,0 z"
+       transform="matrix(9.8669464,-9.8669464,7.3431349,7.3431349,247.63253,981.45824)"
+       id="path3610" />
+    <path
+       transform="matrix(2.5033091,-2.5033091,3.9054821,3.9054821,573.15947,804.25972)"
+       d="m 62.016069,23.188128 a 22.367582,22.367582 0 1 1 -44.735164,0 22.367582,22.367582 0 1 1 44.735164,0 z"
+       sodipodi:ry="22.367582"
+       sodipodi:rx="22.367582"
+       sodipodi:cy="23.188128"
+       sodipodi:cx="39.648487"
+       id="path3763"
+       style="fill:#1b6985;fill-opacity:1;stroke:none"
+       sodipodi:type="arc" />
+    <path
+       sodipodi:type="star"
+       style="fill:#999999;fill-opacity:1;stroke:none"
+       sodipodi:sides="3"
+       sodipodi:cx="23.486048"
+       sodipodi:cy="14.917504"
+       sodipodi:r1="12.627538"
+       sodipodi:r2="6.3918843"
+       sodipodi:arg1="-0.0099996674"
+       sodipodi:arg2="1.0371979"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 36.112954,14.791235 17.281947,25.915861 17.063242,4.0454171 z"
+       transform="matrix(5.9896607,-5.9896607,5.9896607,5.9896607,494.42167,883.44745)"
+       inkscape:transform-center-x="19.159213"
+       inkscape:transform-center-y="12.075518"
+       id="path3613" />
+    <path
+       inkscape:transform-center-y="10.209257"
+       inkscape:transform-center-x="16.198896"
+       transform="matrix(5.0642416,-5.0642416,5.0642416,5.0642416,453.93745,951.65811)"
+       d="M 36.112954,14.791235 17.281947,25.915861 17.063242,4.0454171 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="true"
+       sodipodi:arg2="1.0371979"
+       sodipodi:arg1="-0.0099996674"
+       sodipodi:r2="6.3918843"
+       sodipodi:r1="12.627538"
+       sodipodi:cy="14.917504"
+       sodipodi:cx="23.486048"
+       sodipodi:sides="3"
+       style="fill:#999999;fill-opacity:1;stroke:none"
+       sodipodi:type="star"
+       id="path3615" />
+    <path
+       sodipodi:type="star"
+       style="fill:#999999;fill-opacity:1;stroke:none"
+       id="path3773"
+       sodipodi:sides="3"
+       sodipodi:cx="23.486048"
+       sodipodi:cy="14.917504"
+       sodipodi:r1="12.627538"
+       sodipodi:r2="6.3918843"
+       sodipodi:arg1="-0.0099996674"
+       sodipodi:arg2="1.0371979"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 36.112954,14.791235 17.281947,25.915861 17.063242,4.0454171 z"
+       transform="matrix(3.596524,-3.596524,3.596524,3.596524,457.65233,991.91839)"
+       inkscape:transform-center-x="11.503474"
+       inkscape:transform-center-y="7.2513554" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4421"
+       style="font-size:180px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:UnDinaru;-inkscape-font-specification:UnDinaru"
+       transform="translate(0,543.04019)"><flowRegion
+         id="flowRegion4423"><rect
+           id="rect4425"
+           width="516.18793"
+           height="205.06097"
+           x="42.426407"
+           y="47.45166"
+           style="font-size:180px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:UnDinaru;-inkscape-font-specification:UnDinaru" /></flowRegion><flowPara
+         id="flowPara4427"
+         style="font-size:180px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:UnDinaru;-inkscape-font-specification:UnDinaru">lifrack</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4429"
+       style="font-size:40px;font-style:oblique;font-variant:normal;font-weight:600;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;font-family:URW Gothic L;-inkscape-font-specification:URW Gothic L Semi-Bold Oblique"
+       transform="translate(-6.2397786,433.80674)"><flowRegion
+         id="flowRegion4431"><rect
+           id="rect4433"
+           width="414.94528"
+           height="48.878265"
+           x="55.118046"
+           y="361.68491"
+           style="font-style:oblique;font-variant:normal;font-weight:600;font-stretch:normal;letter-spacing:0px;fill:#666666;font-family:URW Gothic L;-inkscape-font-specification:URW Gothic L Semi-Bold Oblique" /></flowRegion><flowPara
+         id="flowPara4435">stay on track</flowPara></flowRoot>  </g>
+</svg>

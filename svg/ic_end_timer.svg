@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="864"
+   height="864"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   inkscape:export-filename="/home/faizal/DEV/ADT workspace/Aladha/res/drawable-xxhdpi/ic_end_timer.png"
+   inkscape:export-xdpi="8.6400003"
+   inkscape:export-ydpi="8.6400003"
+   sodipodi:docname="ic_end_timer.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="7.8571371"
+     inkscape:cy="274.28571"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="true"
+     inkscape:showpageshadow="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       orientation="1,0"
+       position="72,0"
+       id="guide2985" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,792"
+       id="guide2987" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,72"
+       id="guide2989" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="792,0"
+       id="guide2991" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,182"
+       id="guide8013" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,682"
+       id="guide8015" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="182,0"
+       id="guide8017" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="682,0"
+       id="guide8019" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-188.36218)">
+    <rect
+       style="opacity:0.6;fill:#333333;fill-opacity:1;stroke:#333333;stroke-width:0.75585568;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:9.07026755, 0.75585563;stroke-dashoffset:0"
+       id="rect7408"
+       width="499.24414"
+       height="499.24414"
+       x="181.99942"
+       y="373.11862"
+       rx="10.40982"
+       inkscape:export-filename="/home/faizal/DEV/ADT workspace/Aladha/res/drawable-xxhdpi/ic_stop_session.png"
+       inkscape:export-xdpi="13.49"
+       inkscape:export-ydpi="13.49" />
+  </g>
+</svg>

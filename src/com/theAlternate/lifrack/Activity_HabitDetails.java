@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBar.TabListener;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar.Tab;
 import android.util.Log;
+import android.view.Menu;
 
 public class Activity_HabitDetails extends ActionBarActivity{
 	//public static final String ARG_OBJECT = "object"; //need to change
@@ -22,6 +23,7 @@ public class Activity_HabitDetails extends ActionBarActivity{
 	private FragmentCollectionPagerAdapter mFragmentCollectionPagerAdapter;
 	private ViewPager mViewPager;
 	
+	@Override
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_habitdetails);
