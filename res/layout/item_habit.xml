@@ -37,7 +37,10 @@
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
 	                android:textSize="22sp"
-	                android:layout_gravity="center_vertical" />
+	                android:layout_gravity="center_vertical"
+	                android:background="@drawable/rectangle_curved_bg_blue"
+	                android:padding="2dp"
+	                android:textColor="@color/white_opaque" />
             
             </LinearLayout>
 

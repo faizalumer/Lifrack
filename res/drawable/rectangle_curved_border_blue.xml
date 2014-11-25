@@ -9,7 +9,6 @@
         android:bottomLeftRadius="5dp"
         android:bottomRightRadius="5dp"/>
     
-    <stroke android:color="@color/dull_blue"
-        android:width="2dp"/>
+    <stroke android:color="@color/dull_blue" android:width="2dp"/>
 
 </shape>

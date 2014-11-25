@@ -19,7 +19,7 @@
                 android:id="@+id/edt_habitname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/rectangle_curved_border"
+                android:background="@drawable/rectangle_curved_border_blue"
                 android:hint="Enter a Tracker name. Example - moisturize"
                 android:padding="10dp" />
 
