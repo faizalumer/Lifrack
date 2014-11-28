@@ -1,5 +1,18 @@
 package com.theAlternate.lifrack;
 
+import com.theAlternate.lifrack.LocalDB.Table_HabitHits;
+import com.theAlternate.lifrack.LocalDB.Table_HabitHitsHistory;
+import com.theAlternate.lifrack.LocalDB.Table_HabitTargets;
+import com.theAlternate.lifrack.LocalDB.Table_HabitTargetsHistory;
+import com.theAlternate.lifrack.LocalDB.Table_Habits;
+import com.theAlternate.lifrack.LocalDB.Table_HabitsHistory;
+import com.theAlternate.lifrack.LocalDB.View_ArchivedHabits_Summary;
+import com.theAlternate.lifrack.LocalDB.View_ArchivedHits;
+import com.theAlternate.lifrack.LocalDB.View_ArchivedTargetsInfo;
+import com.theAlternate.lifrack.LocalDB.View_HabitsCompleteInfo;
+import com.theAlternate.lifrack.LocalDB.View_Hits;
+import com.theAlternate.lifrack.LocalDB.View_TargetsInfo;
+
 import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.UriMatcher;

@@ -34,6 +34,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.theAlternate.lifrack.Dao.IHitDao;
+import com.theAlternate.lifrack.Dao.HitDaoImpl;
+import com.theAlternate.lifrack.Dao.IHitSessionDao;
+import com.theAlternate.lifrack.Dao.HitSessionDaoImpl;
+import com.theAlternate.lifrack.LocalDB.View_ArchivedHits;
+import com.theAlternate.lifrack.LocalDB.View_Hits;
 import com.theAlternate.lifrack.R.color;
 
 public class Fragment_Hits extends ListFragment implements LoaderManager.LoaderCallbacks<Cursor>{
@@ -294,9 +300,9 @@ public class Fragment_Hits extends ListFragment implements LoaderManager.LoaderC
 				SparseBooleanArray checkedPositions = mListView.getCheckedItemPositions();
 				int count = checkedPositions.size();
 				Cursor cursor;
-				HitSessionDao hitSessionDao = new HitSessionDaoImpl();
-				HitDao hitDao = new HitDaoImpl();
 				SQLiteDatabase db = LocalDBHelper.getInstance().getWritableDatabase();
+				IHitSessionDao hitSessionDao = new HitSessionDaoImpl(db);
+				IHitDao hitDao = new HitDaoImpl(db);
 				db.beginTransaction();
 				try{
 					//delete the sessions

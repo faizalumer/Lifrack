@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.theAlternate.lifrack.Dao.HabitDaoImpl;
+import com.theAlternate.lifrack.Dao.IReminderDao;
+import com.theAlternate.lifrack.Dao.ReminderDaoImpl;
+import com.theAlternate.lifrack.Dao.IScheduleDao;
+import com.theAlternate.lifrack.Dao.ScheduleDaoImpl;
+
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -304,9 +310,10 @@ public class Fragment_EditHabit extends Fragment{
 		}
 		
 		//get original data from DB
-		Schedule originalSchedule = new ScheduleDaoImpl().getLatestScheduleByHabitId(habitId);
-		Habit originalHabit = new HabitDaoImpl().get(habitId);
-		List<Reminder> originalReminderList = new ReminderDaoImpl().getAllRemindersByHabitId(habitId);
+		SQLiteDatabase db = LocalDBHelper.getInstance().getReadableDatabase();
+		Schedule originalSchedule = new ScheduleDaoImpl(db).getLatestScheduleByHabitId(habitId);
+		Habit originalHabit = new HabitDaoImpl(db).get(habitId);
+		List<Reminder> originalReminderList = new ReminderDaoImpl(db).getAllRemindersByHabitId(habitId);
 		/*HabitEditableContent originalContent = new Habit(habitId).getEditableContent();
 		Habit habit = new Habit((int) getActivity().getIntent().getExtras().getLong(Activity_EditHabit.KEY_HABITID));*/
 		
@@ -315,13 +322,13 @@ public class Fragment_EditHabit extends Fragment{
 		boolean isSuccess = true;
 		boolean reminderServiceNeedsUpdate = false;
 		
-		SQLiteDatabase db = LocalDBHelper.getInstance().getWritableDatabase();
+		db = LocalDBHelper.getInstance().getWritableDatabase();
 		db.beginTransaction();
 		try{
 			//update name
 			if(!originalHabit.getName().equals(habitName)){
 				originalHabit.setName(habitName);
-				new HabitDaoImpl().update(originalHabit);
+				new HabitDaoImpl(db).update(originalHabit);
 				isChanged = true;
 			}
 			
@@ -335,7 +342,7 @@ public class Fragment_EditHabit extends Fragment{
 			//update the schedule and reminders only if the schedule is enabled
 			//otherwise just ignore all changes
 			if(isScheduleEnabled){
-				ReminderDao reminderDao = new ReminderDaoImpl();
+				IReminderDao reminderDao = new ReminderDaoImpl(db);
 				
 				//delete reminders
 				for(Long reminderId : this.deletedReminderList){
@@ -377,13 +384,13 @@ public class Fragment_EditHabit extends Fragment{
 				
 				//update schedule
 				if(originalSchedule == null){
-					new ScheduleDaoImpl().insert(schedule);
+					new ScheduleDaoImpl(db).insert(schedule);
 					isChanged = true;
 					reminderServiceNeedsUpdate = true;
 				}
 				else if(!originalSchedule.equals(schedule)){
 					originalSchedule.invalidate();
-					ScheduleDao scheduleDao = new ScheduleDaoImpl();
+					IScheduleDao scheduleDao = new ScheduleDaoImpl(db);
 					scheduleDao.update(originalSchedule);
 					scheduleDao.insert(schedule);
 					//habit.updateSchedule(schedule);	
@@ -424,9 +431,10 @@ public class Fragment_EditHabit extends Fragment{
 		
 		//////////////////
 		//HabitEditableContent originalContent = new Habit(habitId).getEditableContent();
-			Schedule schedule = new ScheduleDaoImpl().getLatestScheduleByHabitId(habitId);
-			Habit habit = new HabitDaoImpl().get(habitId);
-			List<Reminder> reminderList = new ReminderDaoImpl().getAllRemindersByHabitId(habitId);
+		SQLiteDatabase db = LocalDBHelper.getInstance().getReadableDatabase();	
+		Schedule schedule = new ScheduleDaoImpl(db).getLatestScheduleByHabitId(habitId);
+			Habit habit = new HabitDaoImpl(db).get(habitId);
+			List<Reminder> reminderList = new ReminderDaoImpl(db).getAllRemindersByHabitId(habitId);
 			//String habitName = getName();dfdfb
 			//Reminder[] reminderArr = getReminders();
 			

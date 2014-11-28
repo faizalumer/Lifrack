@@ -20,7 +20,7 @@ public class HitSession{
 		this.endTime = endTime;
 	}
 	
-	//constructor to create new hit NOT existing in DB
+	//constructor to create new hit session NOT existing in DB.
 	public HitSession(long habitId, Date startTime){
 		this.id = DUMMY_VALUE;
 		this.hitId = null;

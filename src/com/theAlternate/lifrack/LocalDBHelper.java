@@ -1,5 +1,25 @@
 package com.theAlternate.lifrack;
 
+import com.theAlternate.lifrack.LocalDB.Table_HabitHitSessions;
+import com.theAlternate.lifrack.LocalDB.Table_HabitHitSessionsHistory;
+import com.theAlternate.lifrack.LocalDB.Table_HabitHits;
+import com.theAlternate.lifrack.LocalDB.Table_HabitHitsHistory;
+import com.theAlternate.lifrack.LocalDB.Table_HabitReminders;
+import com.theAlternate.lifrack.LocalDB.Table_HabitSchedules;
+import com.theAlternate.lifrack.LocalDB.Table_HabitSchedulesHistory;
+import com.theAlternate.lifrack.LocalDB.Table_HabitTargets;
+import com.theAlternate.lifrack.LocalDB.Table_HabitTargetsHistory;
+import com.theAlternate.lifrack.LocalDB.Table_Habits;
+import com.theAlternate.lifrack.LocalDB.Table_HabitsHistory;
+import com.theAlternate.lifrack.LocalDB.View_ArchivedHabits_Summary;
+import com.theAlternate.lifrack.LocalDB.View_ArchivedHits;
+import com.theAlternate.lifrack.LocalDB.View_ArchivedTargetsInfo;
+import com.theAlternate.lifrack.LocalDB.View_HabitHitsSummary;
+import com.theAlternate.lifrack.LocalDB.View_HabitsCompleteInfo;
+import com.theAlternate.lifrack.LocalDB.View_Hits;
+import com.theAlternate.lifrack.LocalDB.View_TargetInfo;
+import com.theAlternate.lifrack.LocalDB.View_TargetsInfo;
+
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

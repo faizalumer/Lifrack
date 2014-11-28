@@ -3,10 +3,16 @@ package com.theAlternate.lifrack;
 import java.text.ParseException;
 import java.util.Date;
 
+import com.theAlternate.lifrack.Dao.HabitOperationsManagerImpl;
+import com.theAlternate.lifrack.Dao.TargetDaoImpl;
+import com.theAlternate.lifrack.LocalDB.View_ArchivedTargetsInfo;
+import com.theAlternate.lifrack.LocalDB.View_TargetsInfo;
+
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v4.app.LoaderManager;
@@ -173,7 +179,8 @@ public class Fragment_TargetsInfo extends ListFragment implements LoaderManager.
 					if(!input.equals("")){
 						if(!target.getDescription().equals(input)){
 							target.setDescription(input);
-							new TargetDaoImpl().updateDescription(target);
+							SQLiteDatabase db = LocalDBHelper.getInstance().getWritableDatabase();
+							new TargetDaoImpl(db).update(target);
 							notifyURI();
 							Toast.makeText(getActivity(), "Description edited", Toast.LENGTH_LONG).show();
 						}
@@ -206,6 +213,8 @@ public class Fragment_TargetsInfo extends ListFragment implements LoaderManager.
 			public boolean onMenuItemClick(MenuItem menuItem) {
 				if(BuildConfig.DEBUG){Log.d(LOG_TAG,"menuItem.getId()=" + String.valueOf(menuItem.getItemId()));}
 				boolean isSuccess = false;
+				SQLiteDatabase db = LocalDBHelper.getInstance().getWritableDatabase();
+				
 				switch(menuItem.getItemId()){
 				case R.id.action_edit_target :
 					if(BuildConfig.DEBUG){Log.d(LOG_TAG,"edit" + String.valueOf(target.getId()));}
@@ -215,13 +224,13 @@ public class Fragment_TargetsInfo extends ListFragment implements LoaderManager.
 					
 				case R.id.action_delete_target :
 					if(BuildConfig.DEBUG){Log.d(LOG_TAG,"delete" + String.valueOf(target.getId()));}
-					new TargetDaoImpl().delete(target.getId());
+					new TargetDaoImpl(db).delete(target.getId());
 					notifyURI();
 					Toast.makeText(getActivity(), "Target deleted", Toast.LENGTH_LONG).show();
 					break;
 					
 				case menuId_achieve :
-					isSuccess = new HabitOperationsManagerImpl().achieveTarget(target.getId());
+					isSuccess = new HabitOperationsManagerImpl(db).achieveTarget(target.getId());
 					if(isSuccess){
 						notifyURI();
 						Toast.makeText(getActivity(), "Congragulations on achieveing your target", Toast.LENGTH_LONG).show();
@@ -230,7 +239,7 @@ public class Fragment_TargetsInfo extends ListFragment implements LoaderManager.
 					break;
 					
 				case menuId_unachieve :
-					isSuccess = new HabitOperationsManagerImpl().unachieveTarget(target.getId());
+					isSuccess = new HabitOperationsManagerImpl(db).unachieveTarget(target.getId());
 					if(isSuccess){
 						notifyURI();
 						Toast.makeText(getActivity(), "Target Un-achieved", Toast.LENGTH_LONG).show();

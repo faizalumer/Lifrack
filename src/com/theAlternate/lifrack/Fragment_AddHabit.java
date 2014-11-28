@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.theAlternate.lifrack.Dao.HabitDaoImpl;
+import com.theAlternate.lifrack.Dao.IReminderDao;
+import com.theAlternate.lifrack.Dao.ReminderDaoImpl;
+import com.theAlternate.lifrack.Dao.ScheduleDaoImpl;
+
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -283,14 +288,14 @@ public class Fragment_AddHabit extends Fragment{
 		SQLiteDatabase db = LocalDBHelper.getInstance().getWritableDatabase();
 		db.beginTransaction();
 		try{
-			long habitId = new HabitDaoImpl().insert(new Habit(habitName,now));
+			long habitId = new HabitDaoImpl(db).insert(new Habit(habitName,now));
 			
 			if(isScheduleEnabled){
-				new ScheduleDaoImpl()
+				new ScheduleDaoImpl(db)
 				.insert(new Schedule(habitId,dailyFrequency, monday, tuesday, wednesday, thursday, friday, saturday, sunday, weekFrequency,now));
 			
 				if(reminderList != null){
-					ReminderDao reminderDao = new ReminderDaoImpl();
+					IReminderDao reminderDao = new ReminderDaoImpl(db);
 					Reminder newReminder,reminder;
 					for(int i=0;i<reminderList.size();i++){
 						reminder = reminderList.get(i);

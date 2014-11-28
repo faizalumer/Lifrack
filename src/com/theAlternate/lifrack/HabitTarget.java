@@ -1,5 +1,7 @@
 package com.theAlternate.lifrack;
 
+import com.theAlternate.lifrack.LocalDB.Table_HabitTargets;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.net.Uri;

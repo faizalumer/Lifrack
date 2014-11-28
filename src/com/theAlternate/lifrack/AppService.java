@@ -6,12 +6,19 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
+import com.theAlternate.lifrack.Dao.HabitDaoImpl;
+import com.theAlternate.lifrack.Dao.HitDaoImpl;
+import com.theAlternate.lifrack.Dao.IReminderDao;
+import com.theAlternate.lifrack.Dao.ReminderDaoImpl;
+import com.theAlternate.lifrack.Dao.ScheduleDaoImpl;
+
 import android.app.AlarmManager;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
@@ -38,8 +45,9 @@ public class AppService extends Service {
 		if(BuildConfig.DEBUG) {Log.d(LOG_TAG,"START : setNextReminderAlarm()");}
 		
 		//get schedules and reminders
-		List<Reminder> reminderList = new ReminderDaoImpl().getAllReminders();
-		List<Schedule> scheduleList = new ScheduleDaoImpl().getAllActiveSchedules();
+		SQLiteDatabase db = LocalDBHelper.getInstance().getReadableDatabase();
+		List<Reminder> reminderList = new ReminderDaoImpl(db).getAllReminders();
+		List<Schedule> scheduleList = new ScheduleDaoImpl(db).getAllActiveSchedules();
 		
 		//quit if there are no active schedules or reminders
 		if(reminderList == null || scheduleList == null) return;
@@ -146,34 +154,35 @@ public class AppService extends Service {
 	
 	public void showNotification(long[] reminderIds){	
 	
-	ReminderDao reminderDao = new ReminderDaoImpl();
-	for (int i = 0; i < reminderIds.length; i++) {
-		Reminder reminder = reminderDao.get(reminderIds[i]);
-		if (reminder != null) {
-			int notificationId = (int) reminder.getId();
-			String habitName = new HabitDaoImpl().get(reminder.getHabitId()).getName();
-			Hit lastHit = new HitDaoImpl().getLastByHabitId(reminder.getHabitId());
-			String contentText = null;
-			if(lastHit != null) contentText = "Last hit " + lastHit.getDurationFromNow();
-			
-			Intent contentIntent = new Intent(this, MainActivity.class);
-			contentIntent.setAction(ACTION_REMINDED);
-			contentIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_CLEAR_TASK);
-			contentIntent.putExtra(MainActivity.KEY_NOTIFICATION_ID, notificationId);
-			PendingIntent contentPendingIntent = PendingIntent.getActivity(this, notificationId, contentIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-			NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(MyApplication.getContext())
-				.setContentTitle(habitName)
-				.setContentText(contentText)
-				.setSmallIcon(R.drawable.ic_stat_notify)
-				.setContentIntent(contentPendingIntent);
-
-			NotificationManager notificationManager = (NotificationManager) MyApplication.getContext().getSystemService(Context.NOTIFICATION_SERVICE);
-			notificationManager.notify(notificationId, notificationBuilder.build());
-			if (BuildConfig.DEBUG) {Log.d(LOG_TAG, "Issued notificationId="+ notificationId);
+		SQLiteDatabase db = LocalDBHelper.getInstance().getReadableDatabase();
+		IReminderDao reminderDao = new ReminderDaoImpl(db);
+		for (int i = 0; i < reminderIds.length; i++) {
+			Reminder reminder = reminderDao.get(reminderIds[i]);
+			if (reminder != null) {
+				int notificationId = (int) reminder.getId();
+				String habitName = new HabitDaoImpl(db).get(reminder.getHabitId()).getName();
+				Hit lastHit = new HitDaoImpl(db).getLastByHabitId(reminder.getHabitId());
+				String contentText = null;
+				if(lastHit != null) contentText = "Last hit " + lastHit.getDurationFromNow();
+				
+				Intent contentIntent = new Intent(this, MainActivity.class);
+				contentIntent.setAction(ACTION_REMINDED);
+				contentIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_CLEAR_TASK);
+				contentIntent.putExtra(MainActivity.KEY_NOTIFICATION_ID, notificationId);
+				PendingIntent contentPendingIntent = PendingIntent.getActivity(this, notificationId, contentIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+				NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(MyApplication.getContext())
+					.setContentTitle(habitName)
+					.setContentText(contentText)
+					.setSmallIcon(R.drawable.ic_stat_notify)
+					.setContentIntent(contentPendingIntent);
+	
+				NotificationManager notificationManager = (NotificationManager) MyApplication.getContext().getSystemService(Context.NOTIFICATION_SERVICE);
+				notificationManager.notify(notificationId, notificationBuilder.build());
+				if (BuildConfig.DEBUG) {Log.d(LOG_TAG, "Issued notificationId="+ notificationId);
+				}
 			}
 		}
 	}
-}
 	
 	
 	@Override

@@ -4,9 +4,13 @@ import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Date;
 
+import com.theAlternate.lifrack.Dao.HabitOperationsManagerImpl;
+import com.theAlternate.lifrack.LocalDB.View_ArchivedHabits_Summary;
+
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v4.app.LoaderManager;
@@ -353,12 +357,13 @@ public class Fragment_ArchivedHabitList extends ListFragment implements LoaderMa
 		public boolean onActionItemClicked(ActionMode mode, MenuItem menuItem) {
 			if(BuildConfig.DEBUG){Log.d(LOG_TAG,"onActionItemClicked");}
 			boolean isSuccess;
+			SQLiteDatabase db = LocalDBHelper.getInstance().getWritableDatabase();
 			
 			switch(menuItem.getItemId()){
 			case R.id.action_delete_habit :
 				if(BuildConfig.DEBUG){Log.d(LOG_TAG,"onActionItemClicked : delete");}
 				//assuming only 1 selection allowed. So getCheckedItemIds()[0] should be enough
-				isSuccess = new HabitOperationsManagerImpl().deleteArchivedHabit(mListView.getCheckedItemIds()[0]);
+				isSuccess = new HabitOperationsManagerImpl(db).deleteArchivedHabit(mListView.getCheckedItemIds()[0]);
 				//Reminder.setNextReminderAlarm();
 				//isSuccess = new ArchivedHabit(mListView.getCheckedItemIds()[0]).delete();
 				if(isSuccess) getActivity().getContentResolver().notifyChange(MyContentProvider.URI_ARCHIVED_HABITS, null);
@@ -368,7 +373,7 @@ public class Fragment_ArchivedHabitList extends ListFragment implements LoaderMa
 			case R.id.action_unarchive_habit :
 				if(BuildConfig.DEBUG){Log.d(LOG_TAG,"onActionItemClicked : archive");}
 				//assuming only 1 selection allowed. So getCheckedItemIds()[0] should be enough
-				isSuccess = new HabitOperationsManagerImpl().unarchiveHabit(mListView.getCheckedItemIds()[0]);
+				isSuccess = new HabitOperationsManagerImpl(db).unarchiveHabit(mListView.getCheckedItemIds()[0]);
 				if(isSuccess){
 					getActivity().getContentResolver().notifyChange(MyContentProvider.URI_HABITS, null);
 					getActivity().getContentResolver().notifyChange(MyContentProvider.URI_ARCHIVED_HABITS, null);

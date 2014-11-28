@@ -47,7 +47,6 @@ public class Target{
 	}
 	
 	public Date getAchievedTime(){
-		if(!isAchieved()) throw new IllegalStateException("This target has not been achieved yet");
 		return this.achievedTime;
 	}
 	

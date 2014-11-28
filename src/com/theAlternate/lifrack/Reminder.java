@@ -13,7 +13,7 @@ import android.util.Log;
 
 
 public class Reminder implements Parcelable{
-	private static final int DUMMY_VALUE = -1;
+	private static final long DUMMY_VALUE = -1;
 	private long habitId;
 	private long id;
 	private int hour;

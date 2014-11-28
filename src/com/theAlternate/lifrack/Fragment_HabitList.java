@@ -40,6 +40,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewAnimator;
 
+import com.theAlternate.lifrack.Dao.HabitOperationsManagerImpl;
+import com.theAlternate.lifrack.Dao.HitDaoImpl;
+import com.theAlternate.lifrack.Dao.HitSessionDaoImpl;
+import com.theAlternate.lifrack.Dao.TargetDaoImpl;
+import com.theAlternate.lifrack.LocalDB.View_HabitsCompleteInfo;
 import com.theAlternate.lifrack.TimerLayout.OnTimerActionListener;
 
 public class Fragment_HabitList extends ListFragment implements LoaderManager.LoaderCallbacks<Cursor>{
@@ -481,14 +486,16 @@ public class Fragment_HabitList extends ListFragment implements LoaderManager.Lo
 				@Override
 				public void onAchieve() {
 					openTarget.achieve();
-					new TargetDaoImpl().updateAchievedTime(openTarget);
+					SQLiteDatabase db = LocalDBHelper.getInstance().getWritableDatabase();
+					new TargetDaoImpl(db).update(openTarget);
 					notifyURI();
 					Toast.makeText(getActivity(), "Congragulations on achieving your target", Toast.LENGTH_LONG).show();
 				}
 
 				@Override
 				public void onAbandon() {
-					new TargetDaoImpl().delete(openTarget.getId());
+					SQLiteDatabase db = LocalDBHelper.getInstance().getWritableDatabase();
+					new TargetDaoImpl(db).delete(openTarget.getId());
 					notifyURI();
 					Toast.makeText(getActivity(), "Target abandoned", Toast.LENGTH_LONG).show();
 					
@@ -497,7 +504,8 @@ public class Fragment_HabitList extends ListFragment implements LoaderManager.Lo
 				@Override
 				public void onSet(String description) {
 					Target newTarget = new Target(habitId,description,new Date(),null);
-					new TargetDaoImpl().insert(newTarget);
+					SQLiteDatabase db = LocalDBHelper.getInstance().getWritableDatabase();
+					new TargetDaoImpl(db).insert(newTarget);
 					notifyURI();
 					Toast.makeText(getActivity(), "New target created", Toast.LENGTH_LONG).show();
 					
@@ -510,7 +518,8 @@ public class Fragment_HabitList extends ListFragment implements LoaderManager.Lo
 				@Override
 				public void onClick(View view) {
 					Hit hit = new Hit(habitId, new Date());
-					new HitDaoImpl().insert(hit);
+					SQLiteDatabase db = LocalDBHelper.getInstance().getWritableDatabase();
+					new HitDaoImpl(db).insert(hit);
 					//new Habit(habitId).hit();
 					getActivity().getContentResolver().notifyChange(MyContentProvider.URI_HABITS, null);
 				}
@@ -522,7 +531,8 @@ public class Fragment_HabitList extends ListFragment implements LoaderManager.Lo
 				@Override
 				public void onClick(View view){
 					HitSession hitSession = new HitSession(habitId, new Date());
-					new HitSessionDaoImpl().insert(hitSession);
+					SQLiteDatabase db = LocalDBHelper.getInstance().getWritableDatabase();
+					new HitSessionDaoImpl(db).insert(hitSession);
 					
 					final Animation inAnim = AnimationUtils.loadAnimation(getActivity(),android.R.anim.slide_in_left);
 					final Animation outAnim = AnimationUtils.loadAnimation(getActivity(),android.R.anim.slide_out_right);
@@ -551,9 +561,9 @@ public class Fragment_HabitList extends ListFragment implements LoaderManager.Lo
 					boolean isSuccess = true;
 					try{
 						Hit hit = new Hit(habitId,new Date());
-						long hitId = new HitDaoImpl().insert(hit);
+						long hitId = new HitDaoImpl(db).insert(hit);
 						hitSession.endSession(hitId, hit.getHitTime());
-						new HitSessionDaoImpl().update(hitSession);
+						new HitSessionDaoImpl(db).update(hitSession);
 						db.setTransactionSuccessful();
 					}
 					catch(Exception e){
@@ -581,7 +591,8 @@ public class Fragment_HabitList extends ListFragment implements LoaderManager.Lo
 				@Override
 				public void onCancel() {
 					//cancel the session
-					new HitSessionDaoImpl().delete(hitSessionId);
+					SQLiteDatabase db = LocalDBHelper.getInstance().getWritableDatabase();
+					new HitSessionDaoImpl(db).delete(hitSessionId);
 					final Animation inAnim = AnimationUtils.loadAnimation(getActivity(),android.R.anim.slide_in_left);
 					final Animation outAnim = AnimationUtils.loadAnimation(getActivity(),android.R.anim.slide_out_right);
 					viewHolder.va_hitSession.setInAnimation(inAnim);
@@ -609,12 +620,13 @@ public class Fragment_HabitList extends ListFragment implements LoaderManager.Lo
 		public boolean onActionItemClicked(ActionMode mode, MenuItem menuItem) {
 			if(BuildConfig.DEBUG){Log.d(LOG_TAG,"onActionItemClicked");}
 			boolean isSuccess = false;
+			SQLiteDatabase db = LocalDBHelper.getInstance().getWritableDatabase();
 			
 			switch(menuItem.getItemId()){
 			case R.id.action_delete_habit :
 				if(BuildConfig.DEBUG){Log.d(LOG_TAG,"onActionItemClicked : delete");}
 				//assuming only 1 selection allowed. So getCheckedItemIds()[0] should be enough
-				isSuccess = new HabitOperationsManagerImpl().deleteHabit(mListView.getCheckedItemIds()[0]);
+				isSuccess = new HabitOperationsManagerImpl(db).deleteHabit(mListView.getCheckedItemIds()[0]);
 				if(isSuccess){
 					getActivity().getContentResolver().notifyChange(MyContentProvider.URI_HABITS, null);
 					Toast.makeText(getActivity(), "Deleted", Toast.LENGTH_LONG).show();
@@ -634,7 +646,7 @@ public class Fragment_HabitList extends ListFragment implements LoaderManager.Lo
 					Toast.makeText(getActivity(), "End/Cancel the session first", Toast.LENGTH_LONG).show();
 				}
 				else{
-					isSuccess = new HabitOperationsManagerImpl().archiveHabit(mListView.getCheckedItemIds()[0]);
+					isSuccess = new HabitOperationsManagerImpl(db).archiveHabit(mListView.getCheckedItemIds()[0]);
 					if(isSuccess){
 						getActivity().getContentResolver().notifyChange(MyContentProvider.URI_HABITS, null);
 						getActivity().getContentResolver().notifyChange(MyContentProvider.URI_ARCHIVED_HABITS, null);
