@@ -314,8 +314,6 @@ public class Fragment_EditHabit extends Fragment{
 		Schedule originalSchedule = new ScheduleDaoImpl(db).getLatestScheduleByHabitId(habitId);
 		Habit originalHabit = new HabitDaoImpl(db).get(habitId);
 		List<Reminder> originalReminderList = new ReminderDaoImpl(db).getAllRemindersByHabitId(habitId);
-		/*HabitEditableContent originalContent = new Habit(habitId).getEditableContent();
-		Habit habit = new Habit((int) getActivity().getIntent().getExtras().getLong(Activity_EditHabit.KEY_HABITID));*/
 		
 		//start transaction
 		boolean isChanged = false;
@@ -332,16 +330,18 @@ public class Fragment_EditHabit extends Fragment{
 				isChanged = true;
 			}
 			
-			/*//update schedule status
-			if(!(originalSchedule.isInvalidated())){
-				habit.updateScheduleStatus(isScheduleEnabled);
+			IScheduleDao scheduleDao = new ScheduleDaoImpl(db);
+			//invalidate the schedule if it has been disabled
+			if((originalSchedule == null || !originalSchedule.isInvalidated()) && !isScheduleEnabled){
+				originalSchedule.invalidate();
+				scheduleDao.update(originalSchedule);
 				isChanged = true;
 				reminderServiceNeedsUpdate = true;
-			}*/
+			}
 			
 			//update the schedule and reminders only if the schedule is enabled
 			//otherwise just ignore all changes
-			if(isScheduleEnabled){
+			else if(isScheduleEnabled){
 				IReminderDao reminderDao = new ReminderDaoImpl(db);
 				
 				//delete reminders
@@ -382,21 +382,22 @@ public class Fragment_EditHabit extends Fragment{
 					}
 				}
 				
-				//update schedule
-				if(originalSchedule == null){
-					new ScheduleDaoImpl(db).insert(schedule);
+				//simply insert new schedule if there was no earlier schedule
+				//or if the earlier one was already disabled
+				if(originalSchedule == null || originalSchedule.isInvalidated()){
+					scheduleDao.insert(schedule);
 					isChanged = true;
 					reminderServiceNeedsUpdate = true;
 				}
+				//otherwise invalidate earlier schedule and insert new one
 				else if(!originalSchedule.equals(schedule)){
 					originalSchedule.invalidate();
-					IScheduleDao scheduleDao = new ScheduleDaoImpl(db);
 					scheduleDao.update(originalSchedule);
 					scheduleDao.insert(schedule);
-					//habit.updateSchedule(schedule);	
 					isChanged = true;
 					reminderServiceNeedsUpdate = true;
 				}
+				
 			}
 			
 			db.setTransactionSuccessful();
