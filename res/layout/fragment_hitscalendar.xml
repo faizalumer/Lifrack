@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/very_light_grey"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_margin="8dp"
+        android:padding="4dp"
+        android:background="@color/white" >
+
+        <ImageButton
+            android:id="@+id/ibt_previousmonth"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="previous month"
+            android:src="@drawable/selector_previous"
+            android:background="@drawable/selector_button_background" />
+
+        <TextView
+            android:id="@+id/txt_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/grey" />
+
+        <ImageButton
+            android:id="@+id/ibt_nextmonth"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="next month"
+            android:src="@drawable/selector_next"
+            android:background="@drawable/selector_button_background" />
+    </LinearLayout>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="4dp"
+        android:background="@color/white" 
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="20dp"
+            android:gravity="left"
+            android:text="M"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/grey"
+             />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="20dp"
+            android:gravity="left"
+            android:text="T" 
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/grey"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="20dp"
+            android:gravity="left"
+            android:text="W" 
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/grey"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="20dp"
+            android:gravity="left"
+            android:text="T" 
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/grey"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="20dp"
+            android:gravity="left"
+            android:text="F" 
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/grey"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="20dp"
+            android:gravity="left"
+            android:text="S" 
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/grey"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="20dp"
+            android:gravity="left"
+            android:text="S" 
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/grey"
+            />
+    </TableRow>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="4dp"
+        />
+
+    <GridView
+        android:id="@+id/grdv_calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numColumns="7"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="4dp"
+        android:background="@color/white" >
+    </GridView>
+
+</LinearLayout>

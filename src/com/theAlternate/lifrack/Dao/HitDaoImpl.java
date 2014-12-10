@@ -1,17 +1,24 @@
 package com.theAlternate.lifrack.Dao;
 
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Date;
-
-import com.theAlternate.lifrack.Hit;
-import com.theAlternate.lifrack.Utilities;
-import com.theAlternate.lifrack.LocalDB.Table_HabitHits;
+import java.util.List;
 
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
+
+import com.theAlternate.lifrack.BuildConfig;
+import com.theAlternate.lifrack.DayCount;
+import com.theAlternate.lifrack.Hit;
+import com.theAlternate.lifrack.Utilities;
+import com.theAlternate.lifrack.LocalDB.Table_HabitHits;
 
 public class HitDaoImpl extends SqliteDaoBase implements IHitDao{
+	
+	private static final String LOG_TAG = "HitDaoImpl";
 	
 	public HitDaoImpl(SQLiteDatabase db) {
 		super(db);
@@ -64,6 +71,28 @@ public class HitDaoImpl extends SqliteDaoBase implements IHitDao{
 				e.printStackTrace();
 			}
 			
+		}
+		
+		return result;
+	}
+
+	@Override
+	public List<DayCount> getHitCountByHabitId(long habitId, int month) {
+		
+		List<DayCount> result = new ArrayList<DayCount>();
+		
+		String sql = "select CAST(strftime('%d', x.date1) AS INTEGER) day, count from"
+				+ " ( select date(" + Table_HabitHits.COLUMN_HIT_TIME + ",'localtime') as date1, count(*) as count from " + Table_HabitHits.TABLE_NAME
+				+ " where " + Table_HabitHits.COLUMN_HABIT_ID + " = " + String.valueOf(habitId) 
+				+ " group by date1 ) x"
+				+ " where CAST(strftime('%m',x.date1) as INTEGER) = " + String.valueOf(month)
+				+ " order by day asc" ;
+		
+		if(BuildConfig.DEBUG){Log.d(LOG_TAG,sql);}
+		
+		Cursor cur = db.rawQuery(sql, null);
+		while(cur.moveToNext()){
+			result.add(new DayCount(cur.getInt(0),cur.getInt(1)));
 		}
 		
 		return result;

@@ -72,6 +72,10 @@ public class Activity_HabitDetails extends ActionBarActivity{
 		};
 		
 		actionBar.addTab(actionBar.newTab()
+				.setText("Calendar")
+				.setTabListener(tabListener));
+		
+		actionBar.addTab(actionBar.newTab()
 				.setText("Hits")
 				.setTabListener(tabListener));
 		
@@ -97,17 +101,14 @@ public class Activity_HabitDetails extends ActionBarActivity{
 			Fragment fragment = null;
 			Bundle args = new Bundle();
 			if(arg0 == 0){
-				fragment = new Fragment_Hits(); //need to change
-				//args.putLong(Fragment_Hits.KEY_HABITID, getIntent().getExtras().getLong(KEY_HABITID));
+				fragment = new Fragment_HitsCalendar(); //need to change
 			}
 			else if(arg0 == 1){
-				fragment = new Fragment_TargetsInfo();
-				//args.putLong(Fragment_TargetsInfo.KEY_HABITID, getIntent().getExtras().getLong(KEY_HABITID));
+				fragment = new Fragment_Hits();
 			}
-			/*else if(arg0 == 2){
-				fragment = new Fragment_Sessions();
-				//args.putLong(Fragment_Sessions.KEY_HABITID, getIntent().getExtras().getLong(KEY_HABITID));
-			}*/
+			else if(arg0 == 2){
+				fragment = new Fragment_TargetsInfo();
+			}
 			
 			fragment.setArguments(args);
 			return fragment;
@@ -117,7 +118,7 @@ public class Activity_HabitDetails extends ActionBarActivity{
 		@Override
 		public int getCount() {
 			//if(BuildConfig.DEBUG){Log.d(LOG_TAG,"getCount");}
-			return 2; //need to change
+			return 3; //need to change
 		}
 		
 		/*@Override

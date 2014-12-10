@@ -190,7 +190,7 @@ public class MyContentProvider extends ContentProvider{
 	public Cursor query(Uri uri, String[] projection, String selection,
 			String[] selectionArgs, String sortOrder) {
 		//SQLiteDatabase db = localDBHelper.getReadableDatabase();
-		SQLiteDatabase db = LocalDBHelper.getInstance().getWritableDatabase();
+		SQLiteDatabase db = LocalDBHelper.getInstance().getReadableDatabase();
 		Cursor cursor = null;
 		int uriType = sUriMatcher.match(uri);
 		

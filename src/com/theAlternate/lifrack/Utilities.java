@@ -684,6 +684,12 @@ public final class Utilities {
 		return true;
 	}
 	
+	public static boolean isMonthEqual(Calendar cal1, Calendar cal2){
+		if(cal1.get(Calendar.YEAR) != cal2.get(Calendar.YEAR) || cal1.get(Calendar.MONTH) != cal2.get(Calendar.MONTH))
+				return false;
+		return true;
+	}
+	
 	public static boolean isDateMoreThan(Calendar cal1, Calendar cal2){
 		if(cal1.get(Calendar.YEAR) < cal2.get(Calendar.YEAR))
 				return false;
