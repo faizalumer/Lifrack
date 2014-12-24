@@ -17,17 +17,18 @@
             android:layout_margin="2dp"
             android:textSize="22sp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/ibt_options" />
 
         <ImageButton
-            android:id="@+id/ibt_options"
+            android:id="@id/ibt_options"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:src="@drawable/ic_overflow"
             android:background="@drawable/selector_button_background"
             android:contentDescription="options"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            />
     </RelativeLayout>
 <!-- android:background="@null" -->
     <TableRow

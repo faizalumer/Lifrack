@@ -1,0 +1,5 @@
+<resources>
+
+    <dimen name="Calendar_day_text">16sp</dimen>
+
+</resources>
